@@ -31,10 +31,8 @@ const searchProducts = async (product) => {
 };
 
 export default function SearchBar() {
-  // const [productInput, setProductInput] = useState("");
   const [suggestions, setSuggestions] = useState([{ id: 0 }]);
   const [suggestionsDisplay, setSuggestionsDisplay] = useState(false);
-  // const [resultsDisplay, setResultsDisplay] = useState(false);
 
   const resultsDisplay = useSelector((state) => state.toggleResults);
   const productInput = useSelector((state) => state.productInput);

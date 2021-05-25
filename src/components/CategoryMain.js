@@ -36,11 +36,9 @@ const fetchProducts = async (category_id, page) => {
 
 const CategoryMain = ({ match }) => {
   let { category_id } = match.params;
-  // const [products, setProducts] = useState(null);
   const products = useSelector((state) => state.products);
   const pagination = useSelector((state) => state.pagination);
   const [category, setCategory] = useState(null);
-  // const [pagination, setPagination] = useState(null);
 
   const dispatch = useDispatch();
 
@@ -50,10 +48,8 @@ const CategoryMain = ({ match }) => {
       setCategory(res);
     });
     fetchProducts(category_id, pagination.page).then((res) => {
-      // setProducts(res.data);
       dispatch(assignProducts(res.data));
       dispatch(assignPagination(res.meta.pagination));
-      // setPagination(res.meta.pagination);
     });
   }, [category_id, pagination.page]);
   return (

@@ -2,9 +2,6 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 import Category from "./Category";
 
-import { useDispatch, useSelector } from "react-redux";
-import { assignProducts } from "../actions";
-
 const fetchCategories = async () => {
   try {
     return await axios
@@ -19,9 +16,6 @@ const fetchCategories = async () => {
 
 const Landing = () => {
   const [categories, setCategories] = useState([]);
-  // useSelector((state) => state.categories);
-
-  const dispatch = useDispatch();
 
   useEffect(() => {
     fetchCategories().then((res) => setCategories(res));

@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { setActivePage } from "../actions";
 
-const Navigation = (props) => {
+const Navigation = () => {
   const dispatch = useDispatch();
   const pagination = useSelector((state) => state.pagination);
 
