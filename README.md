@@ -1,3 +1,3 @@
 # E-Store
 
-- Live View: [HERE](https://e-store-ms.herokuapp.com/
+- Live View: [HERE](https://e-store-ms.herokuapp.com/)
